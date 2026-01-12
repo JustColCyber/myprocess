@@ -20,6 +20,8 @@ nmap -A -p 80 -sV 10.10.11.98 -v
 
 whatweb monitorsfour.htb
 
+### EyeWitness
+
 ### Wapalyzer
 
 Browser Extension, click, and look.
@@ -41,7 +43,3 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_direc
 ## Sub-Domain Enumeration
 
 ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fs 138
-
-## Stack Enumeration
-
-Wapalyzer

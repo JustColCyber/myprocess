@@ -14,6 +14,16 @@ nmap --script banner.nse 10.10.11.98
 
 nmap -A -p 80 -sV 10.10.11.98 -v 
 
+## Stack Enumeration
+
+### Whatweb
+
+whatweb monitorsfour.htb
+
+### Wapalyzer
+
+Browser Extension, click, and look. 
+
 ## Directory Enumeration
 
 ### dirsearch

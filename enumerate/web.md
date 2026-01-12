@@ -22,7 +22,11 @@ whatweb monitorsfour.htb
 
 ### Wapalyzer
 
-Browser Extension, click, and look. 
+Browser Extension, click, and look.
+
+### Manual
+
+curl and grep.
 
 ## Directory Enumeration
 

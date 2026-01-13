@@ -10,3 +10,7 @@ nmap -p- -sC -Pn 10.10.11.98 -open -v
 
 nmap -A -p 80 -sV 10.10.11.98 -v
 
+### NMAP Scripts
+
+/usr/share/nmap/scripts
+

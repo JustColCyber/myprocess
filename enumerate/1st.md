@@ -10,6 +10,10 @@ nmap -p- -sC -Pn 10.10.11.98 -open -v
 
 nmap -Pn -sU -sV -T3 10.129.52.231
 
+### NMAP for top 25 UDP ports
+
+nmap -Pn -sU -sV -T3 --top-ports 25 10.129.95.215 -v
+
 ### NMAP for aggressive scan on a single port
 
 nmap -A -p 80 -sV 10.10.11.98 -v

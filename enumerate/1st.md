@@ -2,9 +2,13 @@
 
 ## Open Ports and Services
 
-### NMAP for open ports.
+### NMAP for open TCP ports.
 
 nmap -p- -sC -Pn 10.10.11.98 -open -v
+
+### NMAP for open UDP ports.
+
+nmap -Pn -sU -sV -T3 10.129.52.231
 
 ### NMAP for aggressive scan on a single port
 

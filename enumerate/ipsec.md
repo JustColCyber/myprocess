@@ -11,6 +11,6 @@ nmap -sU -Pn -T4 -p500 -A 110.10.11.98
 
 ## Ikescan
 
-Show if IPSEC gateway, IPSEC vendor, and negotiation info
+Show if IPSEC gateway, IPSEC vendor, and cipher suite negotiation info
 
 ike-scan -M --showbackoff 10.129.95.215

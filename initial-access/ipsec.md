@@ -51,18 +51,22 @@ Use the Group ID and PSK to brute the XAUTH user/pass. Lists can be used for use
 
 ### VPNC config
 
-cat > /etc/vpnc/samplevpn.conf << STOP
-IPSec gateway 10.1.1.1
-IPSec ID example@test.com
-IPSec secret freakingrockstarontheroad
-IKE Authmode psk
-Xauth username [VPN_USERNAME]
-Xauth password [VPN_PASSWORD]
-STOP
+        ```
+        cat > /etc/vpnc/samplevpn.conf << STOP
+        IPSec gateway 10.1.1.1
+        IPSec ID example@test.com
+        IPSec secret freakingrockstarontheroad
+        IKE Authmode psk
+        Xauth username [VPN_USERNAME]
+        Xauth password [VPN_PASSWORD]
+        STOP
+        ```
 
 ### VPNC usage
+
 root@system:~# vpnc samplevpn
-VPNC started in background (pid: [PID])...
-root@system:~# ifconfig tun0
+
+        VPNC started in background (pid: [PID])...
+        root@system:~# ifconfig tun0
 
 

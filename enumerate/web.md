@@ -42,4 +42,10 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_direc
 
 ## Sub-Domain Enumeration
 
+Filter out a specific response size with -fs
+
 ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fs 138
+
+Filter out a specific response code with -fc 
+
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fc 301

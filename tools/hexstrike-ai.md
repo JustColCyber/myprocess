@@ -4,7 +4,7 @@
 
 https://github.com/0x4m4/hexstrike-ai
 
-https://github.com/nanbingxyz/5ire
+Github Copilot: https://youtu.be/pSoftCagCm8?t=537
 
 Pip on the requirements.txt required this: 
 

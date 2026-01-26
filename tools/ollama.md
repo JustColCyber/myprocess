@@ -6,6 +6,8 @@ curl https://ollama.ai/install.sh | sh
 
 ollama pull llama3
 
+After install Ollama runs automatically.
+
 ## Config
 
 Use the GPU Intel Corporation HD Graphics 620 (rev 02
@@ -26,8 +28,8 @@ export ONEAPI_DEVICE_SELECTOR=level_zero:0
 ./start-ollama.sh
 
 
-## Run
+## Run a specific Model on Ollama
 
-./ollama run llama3
+ollama run llama3
 
 

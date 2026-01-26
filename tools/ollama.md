@@ -17,7 +17,7 @@ lspci -k | grep -EA3 'VGA|3D|Display'
         Subsystem: Hewlett-Packard Company Device 827d
         Kernel driver in use: i915
 
-# Set environment variables for better performance
+# Set environment variables for better performance but seems to be worse performance
 
 export OLLAMA_NUM_GPU=999
 

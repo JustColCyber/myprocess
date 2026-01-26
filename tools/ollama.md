@@ -18,8 +18,11 @@ Use the GPU Intel Corporation HD Graphics 620 (rev 02
 
 cd [extracted_folder]
 # Set environment variables for better performance
+
 export OLLAMA_NUM_GPU=999
+
 export ONEAPI_DEVICE_SELECTOR=level_zero:0
+
 ./start-ollama.sh
 
 

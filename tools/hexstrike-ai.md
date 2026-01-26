@@ -4,7 +4,9 @@
 
 https://github.com/0x4m4/hexstrike-ai
 
-Github Copilot: https://youtu.be/pSoftCagCm8?t=537
+https://www.youtube.com/watch?v=pSoftCagCm8
+
+## Install
 
 Pip on the requirements.txt required this: 
 

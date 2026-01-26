@@ -13,3 +13,10 @@ sudo chown -R youruser:youruser /usr/bin/hexstrike-ai/hexstrike-env
 
 
 You can install and run HexStrike AI MCPs with various AI clients, including: https://www.youtube.com/watch?v=pSoftCagCm8
+
+## Usage
+
+You installed it here: /usr/bin/hexstrike-ai
+
+python3 hexstrike_server.py
+

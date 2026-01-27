@@ -35,7 +35,7 @@ Use a NMAP xml to import the targets.
 
 ### Wapalyzer
 
-Browser Extension, click, and look.
+Browser Extension, click, look, and download output.
 
 ### Manual
 
@@ -46,6 +46,10 @@ curl and grep.
 ### dirsearch
 
 dirsearch -u http://monitorsfour.htb -x 404
+
+Specify the output path:
+
+sudo dirsearch -u http://soulmate.htb -x 404 -o /home/user1/dirsearch/soulmate
 
 ### FFUF
 

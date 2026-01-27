@@ -18,16 +18,16 @@ nmap -A -p 80 -sV 10.10.11.98 -v
 
 ### Whatweb
 
-whatweb monitorsfour.htb
+whatweb example.com
 
 ### EyeWitness
 
 cd /usr/share/eyewitness
-./EyeWitness.py --single http://soulmate.htb
+./EyeWitness.py --single http://example.com
 
 Specify the output file:
 
-./EyeWitness.py --single http://soulmate.htb -d /home/user1/soulmate
+./EyeWitness.py --single http://example.com -d /home/user1/soulmate
 
 Use a NMAP xml to import the targets.
 ./EyeWitness.py -x nmap_scan.xml
@@ -45,7 +45,10 @@ curl and grep.
 
 ### dirsearch
 
-dirsearch -u http://monitorsfour.htb -x 404
+dirsearch -u http://example.com -x 404
+
+Follow redirects but scan takes longer:
+dirsearch -u http://example.com/ -x 404 -F 
 
 Specify the output path:
 
@@ -61,17 +64,17 @@ sudo dirbuster -H -u http://example.com -l /usr/share/dirbuster/wordlists/direct
 
 ### FFUF
 
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-lowercase-2.3-big.txt -u http://monitorsfour.htb/FUZZ
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-lowercase-2.3-big.txt -u http://example.com/FUZZ
 
 ## Sub-Domain Enumeration
 
 Filter out a specific response size with -fs
 
-ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fs 138
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.example.com" -c -fs 138
 
 Filter out a specific response code with -fc 
 
-ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.monitorsfour.htb" -c -fc 301
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.example.com" -c -fc 301
 
 ## XXE Enumeration
 

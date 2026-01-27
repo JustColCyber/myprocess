@@ -22,6 +22,17 @@ whatweb monitorsfour.htb
 
 ### EyeWitness
 
+cd /usr/share/eyewitness
+./EyeWitness.py --single http://soulmate.htb
+
+Specify the output file:
+
+./EyeWitness.py --single http://soulmate.htb -d /home/user1/soulmate
+
+Use a NMAP xml to import the targets.
+./EyeWitness.py -x nmap_scan.xml
+
+
 ### Wapalyzer
 
 Browser Extension, click, and look.

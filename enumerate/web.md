@@ -49,7 +49,15 @@ dirsearch -u http://monitorsfour.htb -x 404
 
 Specify the output path:
 
-sudo dirsearch -u http://soulmate.htb -x 404 -o /home/user1/dirsearch/soulmate
+sudo dirsearch -u http://example.com -x 404 -o /home/user1/dirsearch/soulmate
+
+### dirbuster
+
+Dirbuster Wordlists: /usr/share/dirbuster/wordlists/
+
+Dirbuster CLI with a builtin wordlist:
+sudo dirbuster -H -u http://example.com -l /usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-small.txt
+
 
 ### FFUF
 

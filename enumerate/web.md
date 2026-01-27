@@ -58,6 +58,10 @@ File extensions to append to the default wordlist:
 
 python3 dirsearch.py -u https://example.com/ -x 404,403 -F -e php,htm,htm
 
+Include authorisation headers:
+
+python3 dirsearch.py -u https://example.com/ -x 404,403 -F -e php,htm,html --exclude-text "F5" -H "Authorization: Basic RnVubnk6WW91VGhvdWdodFRoaXNXYXNSZWFsCg=="
+
 ### dirbuster
 
 Dirbuster Wordlists: /usr/share/dirbuster/wordlists/

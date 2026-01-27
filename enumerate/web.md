@@ -54,6 +54,10 @@ Specify the output path:
 
 sudo dirsearch -u http://example.com -x 404 -o /home/user1/dirsearch/soulmate
 
+File extensions to append to the default wordlist:
+
+python3 dirsearch.py -u https://example.com/ -x 404,403 -F -e php,htm,htm
+
 ### dirbuster
 
 Dirbuster Wordlists: /usr/share/dirbuster/wordlists/

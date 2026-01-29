@@ -23,7 +23,7 @@ whatweb example.com
 ### EyeWitness
 
 cd /usr/share/eyewitness
-./EyeWitness.py --single http://example.com
+python3 EyeWitness.py --single http://soulmate.htb --web
 
 Specify the output file:
 

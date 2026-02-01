@@ -22,3 +22,7 @@ You installed it here: /usr/bin/hexstrike-ai
 
 python3 hexstrike_server.py
 
+## WSL Oddities
+
+Ctrl+Shift+P → "WSL: Reopen Folder in WSL"
+

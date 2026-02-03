@@ -113,10 +113,9 @@ See the backend web tech.
 ```
 ## XSS Testing 
 
-Payloads for testing
+Payloads to quickly test XSS.
 ```
-<sc
-ript>print()</script>
+<script>print()</script>
 ```
 ```
 <script>alert(window.origin)</script>

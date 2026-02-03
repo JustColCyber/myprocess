@@ -111,8 +111,13 @@ See the backend web tech.
   </xsl:template>
 </xsl:stylesheet>
 ```
-## XSS Testing Payloads
+## XSS Testing 
 
-<script>print()</script>
-
+Payloads for testing
+```
+<sc
+ript>print()</script>
+```
+```
 <script>alert(window.origin)</script>
+```

@@ -23,3 +23,7 @@ Perform authentication using certificates
 Relay NTLM authentication to AD CS HTTP(S)/RPC endpoints
 Support for Shadow Credentials, Golden Certificates, and Certificate Mapping Attacks
 And much more!
+
+## XXS Strike
+https://github.com/s0md3v/XSStrike
+https://academy.hackthebox.com/module/103/section/982

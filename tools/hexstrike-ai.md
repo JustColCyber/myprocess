@@ -19,8 +19,11 @@ You can install and run HexStrike AI MCPs with various AI clients, including: ht
 ## Install not in venv on WSL Ubuntu
 
 git clone https://github.com/CommonHuman-Lab/hexstrike-ai-community-edition.git
+
 cd hexstrike-ai-community-edition/ 
+
 sudo apt install python3-pip
+
 sudo python3 -m pip install --break-system-packages -r requirements.txt
 
 

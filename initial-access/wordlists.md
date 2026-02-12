@@ -12,3 +12,7 @@
 ## Directories on Websites
 
 /usr/share/dirbuster/wordlists
+
+## S3
+
+/usr/share/seclists/Discovery/Web-Content/s3-buckets.txt

@@ -1,7 +1,18 @@
 # minIO
-enumerate a MinIO site, you can use the official MinIO Client (mc), which acts as a powerful command-line interface for interacting with S3-compatible storage. Enumeration typically involves identifying available buckets and then listing the objects within them. 
+
+
+## Install minIO Client
+
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+sudo mv mc /usr/local/bin/
+mc --help
+
+## Enumerate MinIO site, you can use the official MinIO Client (mc), which acts as a powerful command-line interface for interacting with S3-compatible storage. Enumeration typically involves identifying available buckets and then listing the objects within them. 
+
 1. Configuration & Initial Discovery
 First, you must set up an alias for the target MinIO server to communicate with it. 
+
 Configure Alias: Run the following command to link the target site to a local name (e.g., myminio).
 bash
 mc alias set myminio http://<TARGET_IP>:9000 ACCESS_KEY SECRET_KEY

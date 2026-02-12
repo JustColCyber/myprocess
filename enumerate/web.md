@@ -39,7 +39,9 @@ Browser Extension, click, look, and download output.
 
 ### Manual
 
-curl and grep.
+curl on each of the ports. When the output is larger use Grep for specific output like version.
+
+curl http://example.com:54321/
 
 ## Directory Enumeration
 

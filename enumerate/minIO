@@ -1,0 +1,51 @@
+# minIO
+enumerate a MinIO site, you can use the official MinIO Client (mc), which acts as a powerful command-line interface for interacting with S3-compatible storage. Enumeration typically involves identifying available buckets and then listing the objects within them. 
+1. Configuration & Initial Discovery
+First, you must set up an alias for the target MinIO server to communicate with it. 
+Configure Alias: Run the following command to link the target site to a local name (e.g., myminio).
+bash
+mc alias set myminio http://<TARGET_IP>:9000 ACCESS_KEY SECRET_KEY
+Use code with caution.
+
+Note: Default credentials for MinIO are often minioadmin:minioadmin.
+Identify Server Status: Check the health and version of the server.
+bash
+mc admin info myminio
+Use code with caution.
+
+ 
+2. Enumerating Buckets and Objects 
+Once connected, you can list the structural components of the site.
+List All Buckets: This provides a top-level view of available data containers.
+bash
+mc ls myminio
+Use code with caution.
+
+Recursive Enumeration: To see every file and folder across the entire site, use the recursive flag.
+bash
+mc ls --recursive myminio
+Use code with caution.
+
+Tree View: For a more visual representation of the folder hierarchy, use the tree command.
+bash
+mc tree --files myminio
+Use code with caution.
+
+ 
+3. Advanced Search & Filtering 
+If you are looking for specific types of data or metadata:
+Search for Specific Files: Use the find command to filter by name or extension.
+bash
+mc find myminio --name "*.sql"
+Use code with caution.
+
+Check Disk Usage: Summarise the size and quantity of objects to identify high-value targets.
+bash
+mc du myminio
+Use code with caution.
+
+ 
+4. Vulnerability & Security Probing 
+If you are performing a security assessment:
+Anonymous Access: Check if buckets are publicly accessible without authentication by attempting to list them without a configured alias or using the mc anonymous command.
+Known Vulnerabilities: Some older versions of MinIO (pre-2023) are susceptible to Information Disclosure vulnerabilities like CVE-2023-28432, which could allow an attacker to retrieve sensitive system configuration. 

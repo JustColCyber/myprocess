@@ -88,7 +88,11 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.
 
 Filter for vulnerable Parameteres: 
 
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://facts.htb/index?FUZZ=value' -fs 2287
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://example.com/index?FUZZ=value' -fs 2287
+
+### Ferric Oxide
+
+feroxbuster -u http://example.com:54321
 
 ## XXE Enumeration
 

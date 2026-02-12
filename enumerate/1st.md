@@ -1,5 +1,7 @@
 # 1st step in enumeration of a target
 
+This is to see what ports are open.
+
 ## Open Ports and Services
 
 ### NMAP for open TCP ports.

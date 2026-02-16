@@ -86,6 +86,10 @@ Filter out a specific response code with -fc
 
 ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://10.10.11.98 -H "Host: FUZZ.example.com" -c -fc 301
 
+Filter in specific response code with -mc
+
+fuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://wingdata.htb -H "Host: FUZZ.example.com" -mc 200
+
 Filter for vulnerable Parameteres: 
 
 ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://example.com/index?FUZZ=value' -fs 2287

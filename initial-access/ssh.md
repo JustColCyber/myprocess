@@ -27,3 +27,8 @@ Syntax: crowbar -b sshkey -s <TARGET_IP> -u <username> -k <path/to/private/key>
 
 crowbar -b sshkey -s 10.10.11.87 -u root -k /home/user1/Downloads/dsa/1024
 
+## SSH Priv Key
+
+chmod 700 ~/.ssh
+chmod 600 /path/to/your_private_key
+ssh -i /path/to/your_private_key username@remote_host

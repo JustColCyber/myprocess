@@ -16,3 +16,9 @@
 ## S3
 
 /usr/share/seclists/Discovery/Web-Content/s3-buckets.txt
+
+## Rockyou
+
+You extract rockyou archive to here:
+
+/usr/share/wordlists/rockyou.txt

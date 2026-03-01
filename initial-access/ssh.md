@@ -39,6 +39,10 @@ Enter new passphrase (empty for no passphrase):
 Enter same passphrase again: 
 Your identification has been saved with the new passphrase.
 
+! Regenerate the Public Key from a Private Key
+
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/rsa.pub
+
 ### NMAP NSE Brute for SSH
 
 

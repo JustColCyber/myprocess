@@ -75,3 +75,5 @@ You can include your Shodan.io API key.
 ### SpiderFoot
 
 ### OSINT Framework
+
+https://osintframework.com/

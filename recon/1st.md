@@ -11,7 +11,31 @@ whois example.com
 
 ## DNS
 
-### Subdomain Passive
+### dnsrecon
+
+Comprehensive DNS enumeration, identifying subdomains, and gathering DNS records for further analysis.
+
+### amass
+
+Actively maintained tool focused on subdomain discovery, known for its integration with other tools and extensive data sources.
+
+### dnsdumpster.com
+
+recon & research, find & lookup dns records
+
+### dnsenum
+
+Comprehensive DNS enumeration tool that supports dictionary and brute-force attacks for discovering subdomains.
+
+#### censys.io for Cert analysis
+
+censys.io
+
+## Endpoints
+
+Shodan.io
+
+## Subdomain Passive
 
 #### crt.sh for Cert Transperency Logs 
 
@@ -20,22 +44,6 @@ crt.sh to search for an organisation name and find endpoints and cert history.
 ```
 curl -s "https://crt.sh/?q=example.com&output=json" | jq -r '.[] | select(.name_value | contains("dev")) | .name_value' | sort -u
 ```
-
-#### censys.io for Cert analysis
-
-censys.io
-
-### dnsrecon
-
-Comprehensive DNS enumeration, identifying subdomains, and gathering DNS records for further analysis.
-
-### dnsdumpster.com
-
-recon & research, find & lookup dns records
-
-## Endpoints
-
-Shodan.io
 
 ## Google Dorking
 

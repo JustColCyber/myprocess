@@ -20,7 +20,7 @@ nmap -sU -Pn -T4 -p500 -A 110.10.11.98
 
 #### NMAP for top 25 UDP ports
 
-nmap -Pn -sU -sV -T3 --top-ports 25 10.10.11.98-v
+nmap -Pn -sU -sV -T3 --top-ports 25 10.10.11.98 -v
 
 ### NMAP for aggressive scan on a single UDP port
 

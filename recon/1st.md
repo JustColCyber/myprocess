@@ -19,6 +19,14 @@ Comprehensive DNS enumeration, identifying subdomains, and gathering DNS records
 
 Actively maintained tool focused on subdomain discovery, known for its integration with other tools and extensive data sources.
 
+#### Passive
+
+amass enum -passive -d owasp.org
+
+#### Active
+
+amass enum -active -d owasp.org -brute -w /root/dns_lists/deepmagic.com-top50kprefixes.txt -src -ip -dir amass4owasp -config /root/amass/config.ini -o amass_results_owasp.txt
+
 ### dnsdumpster.com
 
 recon & research, find & lookup dns records

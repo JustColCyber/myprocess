@@ -6,6 +6,10 @@ cat /etc/os-release
 
 ## Kernel Version
 
+cat /proc/version
+
+uname -a
+
 ## Running Services
 
 ps aux | grep root

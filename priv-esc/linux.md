@@ -1,4 +1,4 @@
-Manual searching for Priv Esc vectors.
+Manual searching for Priv Esc vectors from the HTB Linux Priv Esc section: https://academy.hackthebox.com/app/module/51/section/1592
 
 ## OS Version
 

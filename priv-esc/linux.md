@@ -8,6 +8,13 @@ Manual searching for Priv Esc vectors from the HTB Linux Priv Esc section: https
 
 ps aux | grep root
 
+## Open Ports
+
+
+### Socket Statistics
+
+ss -tulpn
+
 ## Installed Packages and Versions
 
 ## Logged in Users

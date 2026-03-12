@@ -10,6 +10,8 @@ cat /proc/version
 
 uname -a
 
+lscpu
+
 ## Running Services
 
 ps aux | grep root
@@ -42,6 +44,10 @@ echo $PATH
 ## Sudo -l
 
 List User privs.
+
+## Shells available
+
+cat /etc/shells
 
 ## Configuration Files
 

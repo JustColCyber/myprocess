@@ -2,6 +2,8 @@ Manual searching for Priv Esc vectors from the HTB Linux Priv Esc section: https
 
 ## OS Version
 
+cat /etc/os-release
+
 ## Kernel Version
 
 ## Running Services
@@ -26,6 +28,12 @@ ss -tulpn
 ## User's Home Directory Contents
 
 ## Bash History
+
+history
+
+## Users Paths
+
+echo $PATH
 
 ## Sudo -l
 

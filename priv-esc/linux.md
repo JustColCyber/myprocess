@@ -45,6 +45,10 @@ echo $PATH
 
 List User privs.
 
+## Groups
+
+cat /etc/group
+
 ## Shells available
 
 cat /etc/shells

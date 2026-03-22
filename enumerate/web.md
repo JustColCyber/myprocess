@@ -14,6 +14,12 @@ nmap --script banner.nse 10.10.11.98
 
 nmap -A -p 80 -sV 10.10.11.98 -v 
 
+### Curl
+
+Ignore a self signed cert:
+
+curl -k https://example.com
+
 ## Stack Enumeration
 
 ### Whatweb

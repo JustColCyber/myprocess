@@ -24,3 +24,20 @@ PORT   STATE SERVICE
 |     publickey
 |_    password
 ```
+## Docker
+
+### Inside a Container
+
+Look for entries with types like ext4, xfs, or overlay that point to directories you recognize. Bind mounts from the host often appear as regular device mounts but are mapped to your specific container paths.
+```
+mount
+```
+or grep
+```
+mount | grep -v ' /etc/' | grep -v ' /proc' | grep -v ' /sys'
+```
+or
+```
+findmnt
+```
+

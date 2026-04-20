@@ -28,6 +28,12 @@ PORT   STATE SERVICE
 
 ### Inside a Container
 
+Enumerate the OS:
+
+```
+cat /etc/os-release
+```
+
 Look for entries with types like ext4, xfs, or overlay that point to directories you recognize. Bind mounts from the host often appear as regular device mounts but are mapped to your specific container paths.
 ```
 mount

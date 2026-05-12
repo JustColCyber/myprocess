@@ -17,7 +17,7 @@ curl -I https://example.com
 
 Show me the HSTS goodness:
 ```
-curl -s -I https://example.com | grep -i strict-transport-security
+curl -s -I https://owasp.org | grep -i strict-transport-security
 ```
 
 Send your HTTP GET with a Cookie:

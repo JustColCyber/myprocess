@@ -27,3 +27,8 @@ And much more!
 ## XXS Strike
 https://github.com/s0md3v/XSStrike
 https://academy.hackthebox.com/module/103/section/982
+
+## Anthropic Cybersecurity Skills 
+Instant access to 753 production-grade cybersecurity skills for AI agents.
+
+https://github.com/mukul975/Anthropic-Cybersecurity-Skills

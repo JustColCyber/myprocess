@@ -47,6 +47,8 @@ List User privs.
 
 ## Groups
 
+groups 
+
 cat /etc/group
 
 ## Shells available

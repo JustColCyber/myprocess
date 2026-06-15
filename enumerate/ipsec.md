@@ -2,7 +2,7 @@
 
 ## NMAP Scanning IPSEC UDP Ports
 
-map -A -p 500 -sU 10.1.1.1 -v
+nmap -A -p 500 -sU 10.1.1.1 -v
 
 nmap -A -p 4500 -sU 10.1.1.1 -v
 

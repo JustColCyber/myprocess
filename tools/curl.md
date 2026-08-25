@@ -25,3 +25,7 @@ Send your HTTP GET with a Cookie:
 ```
 curl --cookie "1234kjasldkjf12340" http://example.com
 ```
+Force the use an HTTP GET request:
+```
+curl -G "https://api.example.com/search" -d "query=curl command" -d "page=1"
+```

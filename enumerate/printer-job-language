@@ -1,5 +1,7 @@
-Printer Job Language (PJL) is a command language created by HP.
-PJL lets users or administrators change printer configurations, check device status, switch printer languages, and view or reset control panel display messages.
-PJL uses raw, unformatted network printing (also called AppSocket). It runs alongside print data (like PCL or PostScript) to control printer settings.
-It uses a physical network card or an external print server box to connect a printer directly to a Local Area Network (LAN). 
-TCP 9100 by default.
+## Printer Job Language
+- Printer Job Language (PJL) is a command language created by HP.
+- PJL lets users or administrators change printer configurations, check device status, switch printer languages, and view or reset control panel display messages.
+- PJL uses raw, unformatted network printing (also called AppSocket). It runs alongside print data (like PCL or PostScript) to control printer settings.
+- It uses a physical network card or an external print server box to connect a printer directly to a Local Area Network (LAN). 
+- TCP 9100 by default.
+- Unauthenticated Access: Port 9100 and PJL commands are unauthenticated by design. Anyone who can reach the printer's IP address on port 9100 can send raw PJL commands.

@@ -1,0 +1,4 @@
+What is HP JetDirect?Definition: JetDirect is a technology created by HP. 
+It uses a physical network card or an external print server box to connect a printer directly to a Local Area Network (LAN).
+Port 9100: JetDirect uses TCP port 9100 by default for raw, unformatted network printing (also called AppSocket).
+PJL is a command language created by HP. It runs alongside print data (like PCL or PostScript) to control printer settings.Functions: PJL lets users or administrators change printer configurations, check device status, switch printer languages, and view or reset control panel display messages.

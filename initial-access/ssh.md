@@ -68,9 +68,12 @@ Syntax: crowbar -b sshkey -s <TARGET_IP> -u <username> -k <path/to/private/key>
 
 crowbar -b sshkey -s 10.10.11.87 -u root -k /home/user1/Downloads/dsa/1024
 
-## SSH Priv Key
+## SSH Priv Pub Key Pair
 ```
+ssh-keygen -t ed25519 -f /tmp/newPrivPubKey -N "" -C sshUserName
+cat /tmp/newPrivPubKey.pub
+
 chmod 700 ~/.ssh
-chmod 600 /path/to/your_private_key
-ssh -i /path/to/your_private_key username@remote_host
+chmod 600 /tmp/newPrivPubKey
+ssh -i /tmp/newPrivPubKey sshUserName@remote_host
 ```

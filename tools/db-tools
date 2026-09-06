@@ -2,12 +2,20 @@
   
 ## mysql
 ```
-  mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+
+```
+```
+SELECT username, email, password FROM users;
+```
+or login and get get the users in a 1 liner:
+```
+mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME> -e "SELECT username, email, password FROM users;"
 
 ```
 ## dbeaver
   
 ## mariadb
 ```
-  mariadb -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+mariadb -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
 ```

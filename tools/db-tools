@@ -1,0 +1,13 @@
+# db-tools
+  
+## mysql
+```
+  mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+
+```
+## dbeaver
+  
+## mariadb
+```
+  mariadb -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+```

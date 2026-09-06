@@ -16,6 +16,7 @@ mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME> -e "SELECT username, email, p
 ## dbeaver
   
 ## mariadb
+User table password hashes use Bcrypt.
 ```
 mariadb -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
 ```

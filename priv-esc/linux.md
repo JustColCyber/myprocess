@@ -41,9 +41,20 @@ history
 
 echo $PATH
 
-## Sudo -l
+## Root testing
+
+Sudo -l
 
 List User privs.
+
+### SUID Binaries, check for scripts invoking them
+
+[asterisk@connected asterisk]$ find / -perm -4000 -type f 2>/dev/
+
+### CRON jobs running as root?
+
+cat /etc/crontab /etc/cron.d/* 2>/dev/null
+ls -la /var/spool/cron/crontabs/ 2>/dev/null
 
 ## Groups
 

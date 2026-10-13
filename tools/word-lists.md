@@ -12,6 +12,9 @@ seclists ~ Collection of multiple types of security lists
 
 /usr/share/seclists
 
+```
+seclists -h
+
 - Discovery
 - Fuzzing
 - Miscellaneous
@@ -20,5 +23,8 @@ seclists ~ Collection of multiple types of security lists
 - payloads
 - Usernames
 - Web-Shells
+```
 
-root@kali:~# seclists -h
+## Wi-Fi Specific
+
+https://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists

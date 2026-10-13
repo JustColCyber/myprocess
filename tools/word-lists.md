@@ -1,3 +1,8 @@
+## rockyou
+
+In Kali:
+
+gzip /usr/share/wordlists/rockyou.txt.gz
 
 ## Seclists
 

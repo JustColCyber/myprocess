@@ -10,3 +10,20 @@ sudo apt autoremove -y
 sudo apt clean
 reboot
 ```
+
+### Change between CLI and GUI
+
+Switch to CLI:
+
+```
+sudo systemctl set-default multi-user
+sudo reboot
+```
+
+Switch to GUI:
+
+```
+sudo systemctl set-default graphical
+sudo reboot
+```
+

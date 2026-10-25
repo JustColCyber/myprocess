@@ -10,11 +10,15 @@ whoami /priv
 
 whoami /groups
 
+## findstr for "password"
+
+findstr /S /I /C:"password" "C:\Program Files\*"
+
 ## winpeas
 
 REF: https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS
 
-##cmd
+## cmd
 
 whoami /all
 

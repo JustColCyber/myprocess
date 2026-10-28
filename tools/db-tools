@@ -2,7 +2,7 @@
   
 ## mysql
 ```
-mysql -uroot -p'<PASSWORD>' -h127.0.0.1 <HOSTANME>
+mysql -u root -p '<PASSWORD>' -h 127.0.0.1 <HOSTANME>
 
 ```
 ```

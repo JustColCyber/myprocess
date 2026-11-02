@@ -57,4 +57,6 @@ Read all history files the current user can access:
 foreach($user in ((ls C:\users).fullname)){cat "$user\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" -ErrorAction SilentlyContinue}
 ```
 
+## Local Ports
 
+netstat -ano

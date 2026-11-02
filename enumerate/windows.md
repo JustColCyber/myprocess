@@ -30,3 +30,4 @@ Dedicated auxiliary scanning module that targets the DCERPC endpoint mapper to e
 use auxiliary/scanner/dcerpc/endpoint_mapper
 set RHOSTS <Target_IP>
 run
+

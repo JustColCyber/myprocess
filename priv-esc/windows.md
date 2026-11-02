@@ -14,6 +14,10 @@ whoami /groups
 
 findstr /S /I /C:"password" "C:\Program Files\*"
 
+## findstr for "password" in specific files
+
+findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml
+
 ## winpeas
 
 REF: https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS

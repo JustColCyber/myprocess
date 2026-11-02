@@ -46,5 +46,15 @@ Confirm the location of the history file:
 ```
 (Get-PSReadLineOption).HistorySavePath
 ```
+Read the history file using gc:
+
+```
+gc (Get-PSReadLineOption).HistorySavePath
+```
+
+Read all history files the current user can access:
+```
+foreach($user in ((ls C:\users).fullname)){cat "$user\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" -ErrorAction SilentlyContinue}
+```
 
 

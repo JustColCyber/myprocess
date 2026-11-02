@@ -33,3 +33,18 @@ reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallEle
 reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 
 Get-CimInstance Win32_Service | ? {$_.PathName -notmatch '"' -and $_.PathName -match ' ' -and $_.PathName -notmatch 'C:\\Windows'} | select Name,PathName,StartName
+
+## Powershell
+
+### History File
+Starting with Powershell 5.0 in Windows 10, PowerShell stores command history to the file:
+
+C:\Users\<username>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt.
+
+Confirm the location of the history file:
+
+```
+(Get-PSReadLineOption).HistorySavePath
+```
+
+

@@ -25,6 +25,11 @@ seclists -h
 - Web-Shells
 ```
 
+## Web Directories
+
+/usr/share/feroxbuster/raft-medium-directories.txt
+
+
 ## Wi-Fi Specific
 
 https://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists

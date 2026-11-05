@@ -5,8 +5,16 @@
 apt install ldap-utils
 
 ### Ldapsearch
+
+First checks:
+
+ldapsearch -x -H ldap://example.com:50389 -s base -b "" "(objectClass=*)" +
+
+ldapsearch -x -H ldap://example.com:50389 -s base -b "" namingContexts supportedControl vendorName vendorVersion
+
+
 ```
-ldapsearch -H ldap://example.com-D ldap@sexample.com -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "dc=name1,dc=name" "*"
+ldapsearch -H ldap://example.com-D ldap@example.com -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "dc=name1,dc=name" "*"
 ```
 
 ## Domain Users add Computers to the Domain

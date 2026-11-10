@@ -60,3 +60,14 @@ foreach($user in ((ls C:\users).fullname)){cat "$user\AppData\Roaming\Microsoft\
 ## Local Ports
 
 netstat -ano
+
+## Always Install Elevated
+REF: https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated
+Is equivalent to granting full administrative rights.
+
+### PowerUp.ps
+PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations.
+https://github.com/bensongithub/PowerShellMafia/tree/master/Privesc
+https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+
+

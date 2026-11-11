@@ -64,6 +64,22 @@ netstat -ano
 ## Always Install Elevated
 REF: https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated
 Is equivalent to granting full administrative rights.
+### Manual check
+
+```
+PS C:\Users\user1\Desktop> reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+
+```
+and
+```
+PS C:\Users\user1\Desktop> reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
+
+```
+Example result:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer
+    AlwaysInstallElevated    REG_DWORD    0x1
+```
 
 ### PowerUp.ps
 PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations.

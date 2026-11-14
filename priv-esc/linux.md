@@ -59,8 +59,14 @@ ls -la /var/spool/cron/crontabs/ 2>/dev/null
 ## Groups
 
 groups 
-
+```
 cat /etc/group
+```
+```
+id
+cat /etc/group | grep openam
+getent group openam
+```
 
 ## Shells available
 

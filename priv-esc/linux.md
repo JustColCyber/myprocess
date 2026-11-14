@@ -80,6 +80,15 @@ find / -perm -4000 -type f 2>/dev/null
 find / -perm -2000 -type f 2>/dev/null
 
 ```
+World writable binaries
+
+```
+ls -la /etc/cron* 2>/dev/null
+cat /etc/crontab 2>/dev/null
+find / -writable -type f 2>/dev/null | grep -v /proc
+cat /etc/passwd
+
+```
 
 ## Shells available
 

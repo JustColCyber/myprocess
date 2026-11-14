@@ -25,7 +25,41 @@ ss -tulpn
 
 ## Installed Packages and Versions
 
-## Logged in Users
+## Users
+
+Shared resources:
+```
+id user1
+id user2
+groups user1
+groups user2
+```
+```
+find / -user user2 -type f 2>/dev/null
+find / -user user2 -type d 2>/dev/null
+find / -group user2 -type f 2>/dev/null 2>&1
+
+```
+Files both users can reach:
+```
+# files owned by user2 that user1's group can read/write
+find / -user user2 \( -perm -g+r -o -perm -g+w \) 2>/dev/null
+
+# anything in user2's home readable by group user1 or world
+ls -la /home/user2 2>/dev/null
+find /home/user2 -perm -o+r 2>/dev/null
+find /home/user2 -perm -g+r 2>/dev/null
+
+```
+or/and
+```
+# any file/dir on disk owned by a group that both user1 and user2 are in
+for g in $(id -Gn user1) $(id -Gn user2); do
+  echo "== group: $g =="
+  find / -group "$g" 2>/dev/null
+done | sort -u
+
+```
 
 ## User Home Directories
 
@@ -64,8 +98,8 @@ cat /etc/group
 ```
 ```
 id
-cat /etc/group | grep openam
-getent group openam
+cat /etc/group | grep user1
+getent group user1
 ```
 
 ```

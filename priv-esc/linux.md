@@ -68,6 +68,19 @@ cat /etc/group | grep openam
 getent group openam
 ```
 
+```
+find / -group <GROUP NAME> -type f 2>/dev/null
+find / -group <GROUP NAME> -type d 2>/dev/null
+
+```
+## Binaries
+
+```
+find / -perm -4000 -type f 2>/dev/null
+find / -perm -2000 -type f 2>/dev/null
+
+```
+
 ## Shells available
 
 cat /etc/shells
